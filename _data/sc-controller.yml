@@ -1,0 +1,12 @@
+name: SC Controller
+description: User-mode driver and GTK3 based GUI for Steam Controller 
+license: GPLv2
+repo: https://github.com/kozec/sc-controller
+development: active
+status: usable
+tags:
+  - driver
+  - configuration
+  - mapper
+  - gamepad
+  - steam

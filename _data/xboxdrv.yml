@@ -1,0 +1,11 @@
+name: Xboxdrv
+description: Xbox/Xbox360 USB Gamepad Driver for Userspace
+license: GPLv3
+repo: https://gitlab.com/xboxdrv/xboxdrv/
+url: https://xboxdrv.gitlab.io/
+development: active
+status: usable
+tags:
+  - driver
+  - xbox
+  - gamepad

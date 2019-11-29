@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/fontello-embedded.css' | absolute_url }}" />
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | absolute_url }}" />
+		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
+		<!-- Check if jekyll-seo-tag plugin is activated -->
+		{% if site.plugins contains 'jekyll-seo-tag' %}
+		{% seo %}
+		{% endif %}
+	</head>
+	<body>
+		<header>
+			<div class="navbar">
+				<nav>
+					<span id="site-title">{{ site.title }}</span>
+					<a href="https://github.com/Linux-Gaming-Tools/linux-gaming-tools.github.io" target="_black" id="repo-link" class="icon-github" title="Source Code"></a>
+				</nav>
+			</div>
+		</header>

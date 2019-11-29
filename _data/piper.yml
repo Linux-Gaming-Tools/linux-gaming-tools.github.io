@@ -1,0 +1,10 @@
+name: Piper
+description: GTK application to configure gaming mice
+license: GPL2
+repo: https://github.com/libratbag/piper
+development: very active
+status: usable
+tags:
+  - wheels
+  - configure
+  - utility

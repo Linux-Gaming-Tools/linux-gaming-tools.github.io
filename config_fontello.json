@@ -1,0 +1,48 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "47a35af762c8e06f3d152750134c8750",
+      "css": "linux",
+      "code": 61820,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7034e4d22866af82bef811f52fb1ba46",
+      "css": "code",
+      "code": 61729,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "197375a3cea8cb90b02d06e4ddf1433d",
+      "css": "globe",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5e0a374728ffa8d0ae1f331a8f648231",
+      "css": "github",
+      "code": 61715,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "83ebb03dce0a930910280e4b1e8333b1",
+      "css": "telegram",
+      "code": 59396,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M893 40.3C872.3 40.9 845.5 47.2 813.1 57.8 709.3 91.7 443.2 190.3 398.4 206.2 353.6 222.1 135.6 295.4 90.4 317.3-2 366.8 42.9 442.4 146.2 481.6 454.7 629.7 367.1 554.2 504.8 828.3 533.2 898.3 600 1017.5 664.1 927.4 697.7 876.1 742.8 725 768.6 654.6 801.4 565 921.4 224.2 940.7 134.8 955.7 65.3 938.8 38.9 893 40.3Z",
+        "width": 986
+      },
+      "search": [
+        "telegram_alternative_logo"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+title: Linux Gaming Tools
+description: >-
+  A colection of tools and drivers for playing games on Linux
+url: "linux-gaming-tools.github.io"
+
+plugins:
+  - jekyll-seo-tag
+
+credits: >-
+  Linux Gaming Tools 2019. Project under the GNU/GPL3 license
+  <br>Make with <a href="http://jekyllrb.com/" target="_black">Jekyll</a>.
+
+exclude:
+  - config_fontello.json
+  - README.md

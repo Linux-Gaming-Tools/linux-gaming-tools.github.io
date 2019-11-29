@@ -1,0 +1,9 @@
+name: Oversteer - Steering Wheel Manager for Linux
+description: Steering Wheel Manager for Linux
+license: GPL3
+repo: https://github.com/berarma/oversteer
+development: active
+status: usable
+tags:
+  - tools
+  - wheel

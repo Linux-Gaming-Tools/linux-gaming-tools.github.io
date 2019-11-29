@@ -1,0 +1,11 @@
+name: ds4drv
+description: ds4drv is a Sony DualShock 4 userspace driver for Linux.
+license: MIT
+repo: https://github.com/chrippa/ds4drv
+development: active
+status: usable
+tags:
+  - driver
+  - gamepad
+  - ds4
+  - playstation

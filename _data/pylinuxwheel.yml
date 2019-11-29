@@ -1,0 +1,10 @@
+name: pyLinuxWheel
+description: Is a simple utility to configure Logitech steering wheels for Linux.
+license: GPL3
+repo: https://gitlab.com/OdinTdh/pyLinuxWheel
+development: active
+status: usable
+tags:
+  - wheels
+  - configure
+  - utility

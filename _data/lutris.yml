@@ -1,0 +1,16 @@
+name: Lutris
+description: >-
+  Lutris is an Open Source gaming platform for Linux. It installs and launches
+  games so you can start playing without the hassle of setting up your games.
+  Get your games from GOG, Steam, Battle.net, Origin, Uplay and many other
+  sources running on any Linux powered gaming machine. 
+repo: 'https://github.com/lutris/lutris'
+url: 'https://lutris.net/'
+development: very active
+status: usable
+license:
+- GPL3
+tags:
+- util
+- games
+- installer

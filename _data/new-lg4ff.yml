@@ -1,0 +1,10 @@
+name: new-lg4ff
+description: Experimental Logitech force feedback module
+license: GPL2
+repo: https://github.com/berarma/new-lg4ff
+development: very active
+status: usable
+tags:
+  - wheels
+  - feedback
+  - driver

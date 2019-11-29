@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="presentation">
+	<p>
+		Este sitio trata de mantener un listado de distintas utilidades como drivers y programás de configuración, orientado a los juegos, como pueden ser game/joypads, wheels, ratones, etc.
+	</p>
+	<p>
+			This project is under the GNU/GPL 3 license and everybody is welcomed to help to add new entries to the list. Please read our colaboration guidelines in our <a href="https://github.com/Linux-Gaming-Tools/linux-gaming-tools.github.io" targer="_black">repository</a>.
+	</p>
+	<p>
+		Espero que este proyecto te sea de mucha utilidad ;)
+	</p>
+</div>
+<h4>List</h4>
+{% capture names %}
+	{% for tool in site.data %}
+		{% if tool[0] != '_template' %}
+			{{ tool[0] }}
+		{% endif %}
+	{% endfor %}
+{% endcapture %}
+{% assign sortednames = names | split:' ' | sort %}
+
+<div id="entries">
+	{% for name in sortednames %}
+	{% assign tool = site.data[name] %}
+		<div class="entry">
+			<span class="entry-title">
+				{{ tool.name }}:
+			</span>
+			<div class="entry-content">{{ tool.description }}</div>
+			<div class="entry-footer">
+				{% if tool.repo contains 'https://github.com/' %}
+					<img src="https://img.shields.io/github/stars/{{ tool.repo | replace: "https://github.com/", "" }}?style=flat&color=e16428&labelColor=212121" />
+				{% endif %}
+				<img src="https://img.shields.io/badge/License-{{ tool.license }}-e16428.svg?style=flat&labelColor=212121" />
+				<div class="status-dev">
+					<div class="title">Status:</div>
+					<div class="text">{{ tool.status }}</div>
+				</div>
+				<div class="status-dev">
+					<div class="title">Development:</div>
+					<div class="text">{{ tool.development }}</div>
+				</div>
+				{% for tag in tool.tags %}
+					<span class="tag">{{ tag }}</span>
+				{% endfor %}
+				<div class="float-right footer-links">
+					<a href="{{ tool.repo }}" target="_black" title="repo"><i class="icon-code"></i></a>
+					{% if tool.url %}
+						<a href="{{ tool.url }}" target="_black" title="Website"><i class="icon-globe"></i></a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

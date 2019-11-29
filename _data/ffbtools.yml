@@ -1,0 +1,10 @@
+name: FFBTools
+description: Set of tools for FFB testing and debugging on GNU/Linux
+license: GPL3
+repo: https://github.com/berarma/ffbtools
+development: active
+status: usable
+tags:
+  - tools
+  - testing
+  - wheel
