@@ -8,7 +8,7 @@ plugins:
 
 credits: >-
   Linux Gaming Tools 2019. Project under the GNU/GPL3 license
-  <br>Make with <a href="http://jekyllrb.com/" target="_black">Jekyll</a>.
+  <br>Made with <a href="http://jekyllrb.com/" target="_black">Jekyll</a>.
 
 exclude:
   - config_fontello.json
