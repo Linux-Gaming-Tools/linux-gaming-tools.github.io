@@ -1,0 +1,11 @@
+name: QJoyPad
+description: QJoyPad is a convenient little program with a Qt interface that converts movement and button presses on a gamepad or joystick into key presses, mouse clicks, and mouse movement in XWindows. It should work on almost every Linux system and with any Linux-supported gaming device.
+license: GPL3
+repo: https://github.com/panzi/qjoypad
+
+development: active
+status: usable
+tags:
+  - gamepad
+  - mapper
+  - utility
