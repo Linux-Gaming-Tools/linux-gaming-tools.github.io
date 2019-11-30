@@ -1,0 +1,11 @@
+name: xpadneo
+description: Advanced Linux Driver for Xbox One Wireless Controller (shipped with Xbox One S)
+license: GPL3
+repo: https://github.com/atar-axis/xpadneo
+url: https://atar-axis.github.io/xpadneo/
+development: active
+status: usable
+tags:
+  - gamepad
+  - driver
+  - xbox one

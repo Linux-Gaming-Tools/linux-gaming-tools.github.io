@@ -1,0 +1,11 @@
+name: ckb-next
+description: open-source driver for Corsair keyboards and mice. It aims to bring the features of Corsair's proprietary CUE software to the Linux and Mac operating systems. This project is currently a work in progress, but it already supports much of the same functionality, including full RGB animations.
+license: GPL3
+repo: https://github.com/ckb-next/ckb-next
+development: very active
+status: usable
+tags:
+  - keyboard
+  - mice
+  - rgb
+  - corsair

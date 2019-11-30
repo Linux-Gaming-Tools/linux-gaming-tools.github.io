@@ -1,0 +1,10 @@
+name: g810-led
+description: Linux led controller for Logitech G213, G410, G413, G512, G513, G610, G810, G910 and GPRO Keyboards
+license: GPL3
+repo: https://github.com/MatMoul/g810-led
+development: active
+status: usable
+tags:
+  - keyboard
+  - rgb
+  - logitech

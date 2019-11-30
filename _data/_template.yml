@@ -2,6 +2,7 @@ name: # The proyect name
 description: # Short description
 license: # The license used for the proyect (GPL3, MIT, BSD, etc)
 repo: # URL of the proyect repo
+url: # Url of the website of the proyect, if have one
 development: # State of development of the proyect [complete , very active, active, sporadic,halted]
 status: # usable, semi-usable or unusable 
 tags: # Add at least 2
