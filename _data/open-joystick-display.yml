@@ -1,7 +1,7 @@
 name: Open Joystick Display
 description: A powerful and easy to use streamer-ready overlay for your joystick or gamepad.
 license: BSD
-repo:https://github.com/KernelZechs/open-joystick-display
+repo: https://github.com/KernelZechs/open-joystick-display
 url: https://ojdproject.com/
 development: active
 status: usable
