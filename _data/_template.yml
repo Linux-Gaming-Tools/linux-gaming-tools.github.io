@@ -1,10 +1,13 @@
+# *: not use for distros
+
 name: # The proyect name
 description: # Short description
-license: # The license used for the proyect (GPL3, MIT, BSD, etc)
+license: # The license used for the proyect (GPL3, MIT, BSD, etc) *
 repo: # URL of the proyect repo
 url: # Url of the website of the proyect, if have one
 development: # State of development of the proyect [complete , very active, active, sporadic,halted]
-status: # usable, semi-usable or unusable 
-tags: # Add at least 2
+status: # usable, semi-usable or unusable
+based_on: # Only for distros. Indicates on which distro it is based (Ubuntu, Debian, Arch Linux, etc)
+tags: # Add at least 2 *
   - tag 1
   - tag 2

@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="presentation">
 	<p>
-		The goal of this site is having a list with several tools, such as drivers and gaming oriented programs like wheels, joysticks and mice configurators and such.
+		The goal of this site is having a list with several tools, such as drivers and gaming oriented programs like wheels, joysticks and mice configurators and such and GNU/Linux distributions specially created to ready to play.
 	</p>
 	<p>
 			This project is under the GNU/GPL 3 license and everybody is welcomed to help to add new entries to the list. Please read our colaboration guidelines in our <a href="https://github.com/Linux-Gaming-Tools/linux-gaming-tools.github.io" targer="_black">repository</a>.
@@ -12,19 +12,18 @@ layout: default
 		I hope this project is very useful for you ;)
 	</p>
 </div>
-<h4>List</h4>
+
+<h4>Drivers & utilities</h4>
 {% capture names %}
-	{% for tool in site.data %}
-		{% if tool[0] != '_template' %}
-			{{ tool[0] }}
-		{% endif %}
+	{% for tool in site.data.tools %}
+		{{ tool[0] }}
 	{% endfor %}
 {% endcapture %}
 {% assign sortednames = names | split:' ' | sort %}
 
 <div id="entries">
 	{% for name in sortednames %}
-	{% assign tool = site.data[name] %}
+	{% assign tool = site.data.tools[name] %}
 		<div class="entry">
 			<span class="entry-title">
 				{{ tool.name }}:
@@ -50,6 +49,59 @@ layout: default
 					<a href="{{ tool.repo }}" target="_black" title="repo"><i class="icon-code"></i></a>
 					{% if tool.url %}
 						<a href="{{ tool.url }}" target="_black" title="Website"><i class="icon-globe"></i></a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+
+<h4>Linux distributions for gaming</h4>
+{% capture distros %}
+	{% for tool in site.data.distros %}
+		{{ tool[0] }}
+	{% endfor %}
+{% endcapture %}
+{% assign sorteddistros = distros | split:' ' | sort %}
+
+<div id="distros">
+	{% for distro in sorteddistros %}
+	{% assign dist = site.data.distros[distro] %}
+		<div class="entry">
+			<span class="entry-title">
+				{{ dist.name }}:
+			</span>
+			<div class="entry-content">{{ dist.description }}</div>
+			<div class="entry-footer">
+				<div class="status-dev">
+					<div class="title">Status:</div>
+					<div class="text">{{ dist.status }}</div>
+				</div>
+				<div class="status-dev">
+					<div class="title">Development:</div>
+					<div class="text">{{ dist.development }}</div>
+				</div>
+				<div class="status-dev">
+					<div class="title">Based on:</div>
+					<div class="text text-distro">
+					{% if dist.based_on == 'archlinux' %}
+						<i class="icon-arch"></i>
+					{% else if dist.based_on == 'ubuntu' %}
+						<i class="icon-ubuntu"></i>
+					{% else if dist.based_on == 'debian' %}
+						<i class="icon-debian"></i>
+					{% endif %}
+					{{ dist.based_on }}
+					
+					</div>
+				</div>
+				{% for tag in distro.tags %}
+					<span class="tag">{{ tag }}</span>
+				{% endfor %}
+				<div class="float-right footer-links">
+					<a href="{{ distro.repo }}" target="_black" title="repo"><i class="icon-code"></i></a>
+					{% if distro.url %}
+						<a href="{{ distro.url }}" target="_black" title="Website"><i class="icon-globe"></i></a>
 					{% endif %}
 				</div>
 			</div>

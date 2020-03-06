@@ -1,0 +1,7 @@
+name: GamerOS
+description: GamerOS is an operating system focused on an out of the box couch gaming experience. After installation, boot directly into Steam Big Picture and start playing your favorite games.
+repo: https://github.com/gamer-os/gamer-os
+url: https://gamer-os.github.io/
+development: very active
+status: usable
+based_on: archlinux

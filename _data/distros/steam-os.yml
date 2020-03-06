@@ -1,0 +1,6 @@
+name: SteamOS
+description: SteamOS is the official operative system of Valve for her Steam Machines, but you can install on any PC
+url: https://store.steampowered.com/steamos/
+development: very active
+status: usable
+based_on: debian

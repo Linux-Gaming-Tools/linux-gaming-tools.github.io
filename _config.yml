@@ -7,7 +7,7 @@ plugins:
   - jekyll-seo-tag
 
 credits: >-
-  Linux Gaming Tools 2019. Project under the GNU/GPL3 license
+  Linux Gaming Tools 2019 - 2020. Project under the GNU/GPL3 license
   <br>Made with <a href="http://jekyllrb.com/" target="_black">Jekyll</a>.
 
 exclude:

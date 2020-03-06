@@ -1,0 +1,7 @@
+name: Salient OS
+description: An Arch Linux Operating System. Salient OS is a rolling-release distribution aimed at Creative Multi-Media and Gaming Enthusiasts.
+repo: https://sourceforge.net/projects/salient-os/
+url: https://salientos.github.io/
+development: very active
+status: usable
+based_on: archlinux

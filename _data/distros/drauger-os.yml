@@ -1,0 +1,7 @@
+name: Drauger OS
+description: Drauger OS is a Linux desktop gaming OS. It attempts to bring the console and PC gaming experiences together onto one unified platform while offering insane speeds and low latency for the large install size by using a Xfce desktop, configured to resemble a gaming console, as well as a low latency Linux kernel.
+repo: https://sourceforge.net/projects/drauger-os/
+url: https://www.draugeros.org/
+development: very active
+status: usable
+based_on: ubuntu

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha256-siyOpF/pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg=" crossorigin="anonymous" />
+  <link href="/pykwalify-webform/static/tagsinput/tagsinput.css" rel="stylesheet" type="text/css">
+  <title> form</title>
+</head>
+<body>
+<div class="container">
+<div class="card">
+<form>
+
+
+<div class="card-header">
+<div class="row">
+  <div class="col">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#schemaModal">
+      YAML schema 🔗
+    </button>
+  </div>
+  <div class="modal fade" id="schemaModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">YAML schema</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <pre class="prettyprint">
+            schema;distro:
+  mapping: &id001
+    base_on:
+      desc: On which distro is based
+      enum:
+      - archlinux
+      - debian
+      - ubuntu
+      - other
+      required: true
+      type: str
+    description:
+      desc: A sort description
+      required: true
+      type: str
+    development:
+      enum:
+      - complete
+      - very active
+      - active
+      - sporadic
+      - halted
+      type: str
+    name:
+      desc: Name of the distro
+      required: true
+      type: str
+    repo:
+      desc: URL where the source code can be found; e.g. a GitHub project page
+      required: false
+      type: str
+    status:
+      enum:
+      - usable
+      - semi-usable
+      - unusable
+      type: str
+    url:
+      desc: URL of the game's main page (if any; should be different from repo)
+      type: str
+  type: map
+sequence:
+- include: distro
+  mapping: *id001
+  type: map
+type: seq
+
+          </pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="card-body">
+  <div class="card">
+  <div class="card-header">Sequence</div>
+  <div class="card-body">
+    
+<div class="form-group row">
+  
+    <label for="[name]" class="col-sm-2 col-form-label">
+      Name
+    </label>
+    <div class="col-sm-10">
+      
+
+
+
+  <input
+    type="text"
+    class="form-control"
+    id="[name]"
+    name="[name]"
+    
+    required
+    
+      placeholder="Name of the distro"
+    
+  >
+
+
+
+    </div>
+  
+</div>
+<div class="form-group row">
+  
+    <label for="[description]" class="col-sm-2 col-form-label">
+      Description
+    </label>
+    <div class="col-sm-10">
+      
+
+
+
+  <input
+    type="text"
+    class="form-control"
+    id="[description]"
+    name="[description]"
+    
+    required
+    
+      placeholder="A sort description"
+    
+  >
+
+
+
+    </div>
+  
+</div>
+<div class="form-group row">
+  
+    <label for="[repo]" class="col-sm-2 col-form-label">
+      Repo
+    </label>
+    <div class="col-sm-10">
+      
+
+
+
+  <input
+    type="text"
+    class="form-control"
+    id="[repo]"
+    name="[repo]"
+    
+    
+    
+      placeholder="URL where the source code can be found; e.g. a GitHub project page"
+    
+  >
+
+
+
+    </div>
+  
+</div>
+<div class="form-group row">
+  
+    <label for="[url]" class="col-sm-2 col-form-label">
+      Url
+    </label>
+    <div class="col-sm-10">
+      
+
+
+
+  <input
+    type="text"
+    class="form-control"
+    id="[url]"
+    name="[url]"
+    
+    
+    
+      placeholder="URL of the game&#39;s main page (if any; should be different from repo)"
+    
+  >
+
+
+
+    </div>
+  
+</div>
+<div class="form-group row">
+  
+    <label for="[development]" class="col-sm-2 col-form-label">
+      Development
+    </label>
+    <div class="col-sm-10">
+      
+
+
+
+  
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[development].complete"
+          name="[development]" value="complete"
+          
+        >
+        <label for="[development].complete" class="form-check-label">complete</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[development].very active"
+          name="[development]" value="very active"
+          
+        >
+        <label for="[development].very active" class="form-check-label">very active</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[development].active"
+          name="[development]" value="active"
+          
+        >
+        <label for="[development].active" class="form-check-label">active</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[development].sporadic"
+          name="[development]" value="sporadic"
+          
+        >
+        <label for="[development].sporadic" class="form-check-label">sporadic</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[development].halted"
+          name="[development]" value="halted"
+          
+        >
+        <label for="[development].halted" class="form-check-label">halted</label>
+      </div>
+    
+  
+
+
+
+    </div>
+  
+</div>
+<div class="form-group row">
+  
+    <label for="[status]" class="col-sm-2 col-form-label">
+      Status
+    </label>
+    <div class="col-sm-10">
+      
+
+
+
+  
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[status].usable"
+          name="[status]" value="usable"
+          
+        >
+        <label for="[status].usable" class="form-check-label">usable</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[status].semi-usable"
+          name="[status]" value="semi-usable"
+          
+        >
+        <label for="[status].semi-usable" class="form-check-label">semi-usable</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[status].unusable"
+          name="[status]" value="unusable"
+          
+        >
+        <label for="[status].unusable" class="form-check-label">unusable</label>
+      </div>
+    
+  
+
+
+
+    </div>
+  
+</div>
+<div class="form-group row">
+  
+    <label for="[base_on]" class="col-sm-2 col-form-label">
+      Base_on
+    </label>
+    <div class="col-sm-10">
+      
+
+
+
+  
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[base_on].archlinux"
+          name="[base_on]" value="archlinux"
+          required
+        >
+        <label for="[base_on].archlinux" class="form-check-label">archlinux</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[base_on].debian"
+          name="[base_on]" value="debian"
+          required
+        >
+        <label for="[base_on].debian" class="form-check-label">debian</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[base_on].ubuntu"
+          name="[base_on]" value="ubuntu"
+          required
+        >
+        <label for="[base_on].ubuntu" class="form-check-label">ubuntu</label>
+      </div>
+    
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="[base_on].other"
+          name="[base_on]" value="other"
+          required
+        >
+        <label for="[base_on].other" class="form-check-label">other</label>
+      </div>
+    
+  
+
+
+
+    </div>
+  
+</div>
+  </div>
+</div>
+</div>
+<div class="card-footer">
+  <button type="submit" class="btn btn-primary" onclick="return submitForm()">Get Code</button>
+  <div class="modal fade" id="yaml-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-label">Add Code</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <textarea class="form-control" id="add-game-yaml-body" style="font-family:monospace;" rows="10">...</textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="copy()">Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.js" integrity="sha256-UzGjnR1p5Tnl9uHyGcbtthS4cULTf5z28PXVxHVElSQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js" integrity="sha256-ry6nlLQ1JmRl5RUPQ4eSuaSp/rGNPvl144WHHs7BiNE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.5/jquery.csv.min.js" integrity="sha256-zGo0JbZ5Sn6wU76MyVL0TrUZUq5GLXaFnMQCe/hSwVI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script src="/pykwalify-webform/static/tagsinput/tagsinput.js"></script>
+<script src="/pykwalify-webform/static/main.js"></script>
+</body>
+</html>

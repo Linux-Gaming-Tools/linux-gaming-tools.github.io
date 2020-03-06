@@ -75,7 +75,7 @@ footer {
 	width: 100%;
 }
 
-#entries {
+#entries, #distros {
 	.entry {
 		padding: .5rem;
 		background: #363333;
@@ -97,6 +97,7 @@ footer {
 
 		.entry-footer > img {
 			vertical-align: middle;
+			margin-bottom: .5rem;
 		}
 		
 		.entry-footer .footer-links {
@@ -108,6 +109,7 @@ footer {
 		.tag, .status-dev, .status-dev > div {
 			display: inline-block;
 			height: 20px;
+			margin-bottom: .5rem;
 		}
 
 		.tag, .status-dev {
@@ -256,6 +258,10 @@ table {
 		&.open {
 			max-height: 100vh;
 		}
+	}
+
+	.footer-links {
+		float: none !important;
 	}
 }
 
