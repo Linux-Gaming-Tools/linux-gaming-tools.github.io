@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="presentation">
 	<p>
 		The goal of this site is having a list with several tools, such as drivers and gaming oriented programs like wheels, joysticks and mice configurators and such and GNU/Linux distributions specially created to ready to play.
@@ -13,7 +14,7 @@ layout: default
 	</p>
 </div>
 
-<h4>Drivers & utilities</h4>
+<h4 id="tools">Drivers & utilities</h4>
 {% capture names %}
 	{% for tool in site.data.tools %}
 		{{ tool[0] }}
@@ -21,12 +22,15 @@ layout: default
 {% endcapture %}
 {% assign sortednames = names | split:' ' | sort %}
 
-<div id="entries">
+<div class="entries">
 	{% for name in sortednames %}
 	{% assign tool = site.data.tools[name] %}
 		<div class="entry">
 			<span class="entry-title">
-				{{ tool.name }}:
+				<a href="{{ tool.repo }}" targer="_black" title="{{ tool.name }}'s repository">{{ tool.name }}</a>
+				{% if tool.url %}
+					<a href="{{ tool.url }}" targer="_black" title="{{ tool.name }}'s webstite"><i class="icon-link"></i></a>
+				{% endif %}
 			</span>
 			<div class="entry-content">{{ tool.description }}</div>
 			<div class="entry-footer">
@@ -45,18 +49,12 @@ layout: default
 				{% for tag in tool.tags %}
 					<span class="tag">{{ tag }}</span>
 				{% endfor %}
-				<div class="float-right footer-links">
-					<a href="{{ tool.repo }}" target="_black" title="repo"><i class="icon-code"></i></a>
-					{% if tool.url %}
-						<a href="{{ tool.url }}" target="_black" title="Website"><i class="icon-globe"></i></a>
-					{% endif %}
-				</div>
 			</div>
 		</div>
 	{% endfor %}
 </div>
 
-<h4>Linux distributions for gaming</h4>
+<h4 id="distros">GNU/Linux distributions for gaming</h4>
 {% capture distros %}
 	{% for tool in site.data.distros %}
 		{{ tool[0] }}
@@ -64,12 +62,17 @@ layout: default
 {% endcapture %}
 {% assign sorteddistros = distros | split:' ' | sort %}
 
-<div id="distros">
+<div class="entries">
 	{% for distro in sorteddistros %}
 	{% assign dist = site.data.distros[distro] %}
 		<div class="entry">
 			<span class="entry-title">
-				{{ dist.name }}:
+				{% if dist.repo %}
+					<a href="{{ dist.repo }}" targer="_black" title="{{ dist.name }}'s repository">{{ dist.name }}</a>
+					<a href="{{ dist.url }}" targer="_black" title="{{ dist.name }}'s webstite"><i class="icon-link"></i></a>
+				{% else %}
+					<a href="{{ dist.url }}" targer="_black">{{ dist.name }}</a>
+				{% endif %}
 			</span>
 			<div class="entry-content">{{ dist.description }}</div>
 			<div class="entry-footer">
@@ -98,12 +101,6 @@ layout: default
 				{% for tag in distro.tags %}
 					<span class="tag">{{ tag }}</span>
 				{% endfor %}
-				<div class="float-right footer-links">
-					<a href="{{ distro.repo }}" target="_black" title="repo"><i class="icon-code"></i></a>
-					{% if distro.url %}
-						<a href="{{ distro.url }}" target="_black" title="Website"><i class="icon-globe"></i></a>
-					{% endif %}
-				</div>
 			</div>
 		</div>
 	{% endfor %}

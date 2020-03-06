@@ -25,7 +25,7 @@ header {
 	}
 
 	#site-title {
-		float: left;
+		margin-right: 1rem;
 	}
 
 	#repo-link {
@@ -75,7 +75,7 @@ footer {
 	width: 100%;
 }
 
-#entries, #distros {
+.entries {
 	.entry {
 		padding: .5rem;
 		background: #363333;

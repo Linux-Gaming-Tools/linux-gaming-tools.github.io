@@ -73,6 +73,12 @@
       ]
     },
     {
+      "uid": "0ddd3e8201ccc7d41f7b7c9d27eca6c1",
+      "css": "link",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
       "uid": "83ebb03dce0a930910280e4b1e8333b1",
       "css": "telegram",
       "code": 59396,
