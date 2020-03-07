@@ -8,7 +8,7 @@ This project is under the GNU/GPL 3 license and everybody is welcomed to help to
 
 To add a new utility or driver you must follow these steps:
 
-* Go to **_data** folder on the repo. This folder is the one that contains two subfolders, one for the tools (**tools**) and other for GNU/Linux distributions (**distro**) and on these the files with the data of what it shows me on the web. In it you will see a file, _template.yml, that you can use as a template, or use [this form for tools](https://linux-gaming-tools.github.io/form-tools) or  [this form for distros](https://linux-gaming-tools.github.io/form-tools) for make the file easily.
+* Go to **_data** folder on the repo. This folder is the one that contains two subfolders, one for the tools (**tools**) and other for GNU/Linux distributions (**distro**) and on these the files with the data of what it shows me on the web. In it you will see a file, _template.yml, that you can use as a template, or use [this form for tools](https://linux-gaming-tools.github.io/form-tools) or  [this form for distros](https://linux-gaming-tools.github.io/form-distros) for make the file easily.
 * Click on **Create new file** on the folder (tools or distros) and copy the content of _template.yml and edit the variables, or copy the result of the form. The name of the file can only have lowercase letters, numbers underscores (\_) and minus (-), and the extension .yml.
 * At the end of the page fill the fields and press **Propose new file**. This generates automatically a new pull request.
 * And that's it Once your contribution has been reviewed the request will be accepted and will automatically appear on the web ;)
