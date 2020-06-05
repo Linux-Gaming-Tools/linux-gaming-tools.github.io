@@ -1,0 +1,12 @@
+name: Xow
+description: Linux driver for the Xbox One wireless dongle
+license: GPLv2
+repo: https://github.com/medusalix/xow
+url: https://medusalix.github.io/xow
+development: active
+status: usable
+tags:
+  - driver
+  - xbox
+  - xbox one
+  - gamepad
