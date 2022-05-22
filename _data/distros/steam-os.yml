@@ -3,4 +3,4 @@ description: SteamOS is the official operative system of Valve for her Steam Mac
 url: https://store.steampowered.com/steamos/
 development: very active
 status: usable
-based_on: debian
+based_on: archlinux
